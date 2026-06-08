@@ -1,6 +1,10 @@
 [build]
-  command = "npm install --include=dev && npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
+
+[build.environment]
+  NPM_CONFIG_PRODUCTION = "false"
+  NODE_VERSION = "18"
 
 [functions]
   directory = "netlify/functions"
